@@ -21,6 +21,7 @@ jobs:
           CIBW_SKIP: pp* cp36-* cp37-* *-musllinux*
           CIBW_ARCHS_MACOS: x86_64 universal2
           CIBW_ARCHS_LINUX: x86_64 aarch64
+          CIBW_ARCHS_WINDOWS: AMD64
           CIBW_TEST_COMMAND: python {project}/test.py
       - uses: actions/upload-artifact@v3
         with:
