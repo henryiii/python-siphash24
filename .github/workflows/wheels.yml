@@ -16,7 +16,7 @@ jobs:
         with:
           platforms: arm64
         if: runner.os == 'Linux'
-      - uses: pypa/cibuildwheel@v2.9.0
+      - uses: pypa/cibuildwheel@v2.11.2
         env:
           CIBW_SKIP: pp* cp36-* *-musllinux*
           CIBW_ARCHS_MACOS: x86_64 universal2
