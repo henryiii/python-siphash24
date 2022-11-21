@@ -18,7 +18,7 @@ jobs:
         if: runner.os == 'Linux'
       - uses: ilammy/msvc-dev-cmd@v1
         if: runner.os == 'Windows'
-      - uses: pypa/cibuildwheel@v2.11.2
+      - run: pipx run cibuildwheel==2.11.2
         env:
           CIBW_SKIP: pp* cp36-* cp37-* *-musllinux*
           CIBW_ARCHS_MACOS: x86_64 universal2
